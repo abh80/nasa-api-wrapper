@@ -11,7 +11,7 @@ class APOD {
         this.key = key;
     }
     async getImage() {
-        const { data: res } = await axios_1.default.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY');
+        const { data: res } = await axios_1.default.get(`https://api.nasa.gov/planetary/apod?api_key=${this.key}`);
         return res.url;
     }
     async getData() {
